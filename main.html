@@ -115,16 +115,22 @@
     <!-- S:mainContent -->
     <div id="content">
         <h1>전체요약
-            <small>Home > 전체요약</small>
+            <small>Home</small>
+            <small>전체요약</small>
         </h1>
 
         <div class="date-wrap">
             <p>기간</p>
-            <a class="active" href="">1개월</a>
-            <a href="">3개월</a>
-            <a href="">6개월</a>
-            <a href="">1년</a>
-            <a class="self" href="">직접입력</a>
+            <input type="radio" name="date" value="1개월" id="one" class="active">
+            <label for="one">1개월</label>
+            <input type="radio" name="date" value="3개월" id="three">
+            <label for="three">3개월</label>
+            <input type="radio" name="date" value="6개월" id="six">
+            <label for="six">6개월</label>
+            <input type="radio" name="date" value="1년" id="year">
+            <label for="year">1년</label>
+            <input type="radio" name="date" value="직접입력" id="self">
+            <label for="self">직접입력</label>
             <select>
                     <option value="2018">2018</option>
                 </select>
@@ -226,7 +232,9 @@
                     <option>31</option>
                 </select>
 
+
             <button class="search">조회</button>
+
         </div>
 
         <div class="dashboard">
@@ -239,6 +247,7 @@
                     </div>
                     <div class="rank">
                         <img src="images/title_01.png" alt="비콘 방문">
+                        <h5>비콘방문 <i>TOP 10</i></h5>
                         <dl class="rank-list rank01">
                             <dd><strong>1</strong>동문재래시장</dd>
                             <dd><strong>2</strong>카멜리아힐</dd>
@@ -261,6 +270,7 @@
                     </div>
                     <div class="rank">
                         <img src="images/title_02.png" alt="연령별 카드 소비">
+                        <h5>연령별 카드 소비 <i>TOP 10</i></h5>
                         <dl class="rank-list rank02">
                             <dd><strong>1</strong>동문재래시장</dd>
                             <dd><strong>2</strong>카멜리아힐</dd>
@@ -286,6 +296,7 @@
                     </div>
                     <div class="rank">
                         <img src="images/title_03.png" alt="지역별 관광객">
+                        <h5>지역별 관광객 <i>TOP 10</i></h5>
                         <dl class="rank-list rank03">
                             <dd><strong>1</strong>동문재래시장</dd>
                             <dd><strong>2</strong>카멜리아힐</dd>
@@ -308,6 +319,7 @@
                     </div>
                     <div class="rank">
                         <img src="images/title_04.png" alt="연령별 카드 소비">
+                        <h5>연령별 카드 소비 <i>TOP 10</i></h5>
                         <dl class="rank-list rank04">
                             <dd><strong>1</strong>동문재래시장</dd>
                             <dd><strong>2</strong>카멜리아힐</dd>

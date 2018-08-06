@@ -580,12 +580,31 @@ body {
             color: #fd8a17;
             font-size: 22px;
             
-
             small {
                 color: #222;
                 font-size: 16px;
-                margin-left: 10px;
                 .normal;
+                margin: 0;
+
+                &:first-child {
+                    margin-left: 20px;
+                }
+
+                &:last-child {
+                    &::after {
+                        .none;
+                    }
+                }
+              
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 25px;
+                    height: 15px;
+                    .middle;
+                    margin: 0 3px 2px 3px;
+                    background: url("../images/arrow.svg") no-repeat center center;
+                }
             }
         }
 
@@ -594,7 +613,7 @@ body {
             width: 100%;
             background: @white;
             border-radius: 5px;
-            padding: 20px 10px;;
+            padding: 20px;
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
 
             p {
@@ -603,6 +622,27 @@ body {
                 color: #fd8a17;
                 font-size: 16px;
                 .normal;
+            }
+
+            input[type="radio"] {
+                .inline-block;
+                .none;
+            }
+
+            input[type="radio"]:checked + label{
+                background: #fd8a17;
+                border: 1px solid #fd8a17;
+                color: @white;
+            }
+
+            label {
+                padding: 8px;
+                border: 1px solid #ddd;
+                line-height: 35px;
+                border-radius: 5px;
+                margin-right: 3px;
+                font-size: 14px;
+                .pointer;
             }
 
             a {
@@ -637,7 +677,7 @@ body {
                 border: 1px solid #ddd;
                 border-radius: 3px;
                 width: 60px;
-                height: 35px;
+                height: 34px;
                 padding-left: 3px;
                 font-size: 14px;
                 .top;
@@ -713,14 +753,14 @@ body {
                 border-radius: 2px;
                 background: #fff;
                 font-size: 14px;
-                padding: 5px 15px;;
+                padding: 7px 15px;
                 .pointer;
                 .absolute;
-                top: 25px;
+                top: 24px;
                 right: 20px;
 
                 &.sub_btn {
-                    top: 127px;
+                    top: 125px;
                 }
             }
         }
@@ -785,22 +825,39 @@ body {
                             left: 0;
                         }
 
+                        h5 {
+                            margin: 0;
+                            color: @white;
+                            font-size: 14px;
+                            .absolute;
+                            top: 36px;
+                            left: 20px;
+                            .normal;
+                        }
+
                         dl.rank-list {
                             .left;
-                            margin: 80px 0 0 0;
+                            margin: 75px 0 0 0;
 
                             dd {
                                 color: @white;
                                 font-size: 16px;
-                                margin-top: 18px;
+                                margin-top: 10px;
                                 .pointer;
                                 
                                 strong {
-                                    
-                                    margin: 0 20px;
+                                    content: "";
+                                        display: inline-block;
+                                        width: 27px;
+                                        height: 27px;
+                                        background: transparent;
+                                        border-radius: 10px 50px 50px 50px;
+                                        padding: 5px 0 5px 0;
+                                        .center;
+                                        margin: 0 14px 0 10px;
 
                                     &.last {
-                                        margin: 0 16px;
+                                        margin: 0 15px 0 8px;
                                     }
                                 }
                             }
@@ -812,16 +869,12 @@ body {
                                         color: #8fbe00;
 
                                         strong {
-                                            content: "";
-                                            display: inline-block;
-                                            width: 27px;
-                                            height: 27px;
                                             background: #8fbe00;
-                                            border-radius: 10px 50px 50px 50px;
-                                            padding: 5px 0 5px 0;
-                                            .center;
                                             color: @white;
-                                            margin: 0 14px 0 10px;
+
+                                            &.last {
+                                                margin: 0 15px 0 8px;
+                                            }
                                         }
                                     }
                                 }
@@ -834,16 +887,12 @@ body {
                                         color: #51ba96;
 
                                         strong {
-                                            content: "";
-                                            display: inline-block;
-                                            width: 25px;
-                                            height: 25px;
                                             background: #51ba96;
-                                            border-radius: 10px 50px 50px 50px;
-                                            padding: 5px 0 5px 0;
-                                            .center;
                                             color: @white;
-                                            margin: 0 14px 0 10px;
+                                            
+                                            &.last {
+                                                margin: 0 15px 0 8px;
+                                            }
                                         }
                                     }
                                 }
@@ -856,16 +905,12 @@ body {
                                         color: #21caee;
 
                                         strong {
-                                            content: "";
-                                            display: inline-block;
-                                            width: 25px;
-                                            height: 25px;
                                             background: #21caee;
-                                            border-radius: 10px 50px 50px 50px;
-                                            padding: 5px 0 5px 0;
-                                            .center;
                                             color: @white;
-                                            margin: 0 14px 0 10px;
+                                            
+                                            &.last {
+                                                margin: 0 15px 0 8px;
+                                            }
                                         }
                                     }
                                 }
@@ -878,16 +923,12 @@ body {
                                         color: #ff8a22;
 
                                         strong {
-                                            content: "";
-                                            display: inline-block;
-                                            width: 25px;
-                                            height: 25px;
                                             background: #ff8a22;
-                                            border-radius: 10px 50px 50px 50px;
-                                            padding: 5px 0 5px 0;
-                                            .center;
                                             color: @white;
-                                            margin: 0 14px 0 10px;
+                                            
+                                            &.last {
+                                                margin: 0 15px 0 8px;
+                                            }
                                         }
                                     }
                                 }
@@ -907,6 +948,7 @@ body {
             .center;
             border-radius: 5px;
             font-size: 16px;
+            padding: 20px;
         }
 
     }

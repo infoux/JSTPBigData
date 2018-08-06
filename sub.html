@@ -116,47 +116,65 @@
     <!-- S:mainContent -->
     <div id="content">
         <h1>방문패턴
-            <small>Home > 비콘 > 방문패턴</small>
+            <small>Home</small>
+            <small>비콘</small>
+            <small>방문패턴</small>
         </h1>
 
         <div class="date-wrap">
             <dl>
                 <dd class="long">
                     <p>주제</p>
-                    <a class="active" href="">방문수(건)</a>
-                    <a href="">평균체류시간(분)</a>
+                    <input type="radio" name="subject" value="방문수(건)" id="visit">
+                    <label for="visit">방문수(건)</label>
+                    <input type="radio" name="subject" value="평균체류시간(분)" id="average">
+                    <label for="average">평균체류시간(분)</label>
                 </dd>
                 <dd>
                     <p>소주제</p>
-                    <a href="">앱 ID</a>
-                    <a href="">플랫폼</a>
-                    <a href="">성별</a>
-                    <a href="">연령별</a>
+                    <input type="radio" name="s_subject" value="앱ID" id="app">
+                    <label for="app">앱 ID</label>
+                    <input type="radio" name="s_subject" value="플랫폼" id="flatform">
+                    <label for="flatform">플랫폼</label>
+                    <input type="radio" name="s_subject" value="성별" id="gender">
+                    <label for="gender">성별</label>
+                    <input type="radio" name="s_subject" value="연령별" id="age">
+                    <label for="age">연령별</label>
                 </dd>
             </dl>
 
             <dl>
                 <dd>
                     <p>지역선택</p>
-                    <a href="">선택없음</a>
-                    <a href="">제주시</a>
-                    <a href="">서귀포시</a>
+                    <input type="radio" name="area" value="선택없음" id="none">
+                    <label for="none">선택없음</label>
+                    <input type="radio" name="area" value="제주시" id="jeju">
+                    <label for="jeju">제주시</label>
+                    <input type="radio" name="area" value="서귀포시" id="seogwipo">
+                    <label for="seogwipo">서귀포</label>
                 </dd>
                 <dd>
                     <p>표출선택</p>
-                    <a href="">일자별</a>
-                    <a href="">지역별</a>
+                    <input type="radio" name="select" value="일자별" id="date_select">
+                    <label for="date_select">일자별</label>
+                    <input type="radio" name="select" value="지역별" id="area_select">
+                    <label for="area_select">지역별</label>
                 </dd>
             </dl>
 
             <dl>
                 <dd class="period">
                     <p>기간</p>
-                    <a href="">1개월</a>
-                    <a href="">3개월</a>
-                    <a href="">6개월</a>
-                    <a href="">1년</a>
-                    <a class="self" href="">직접입력</a>
+                    <input type="radio" name="date" value="1개월" id="one">
+                    <label for="one">1개월</label>
+                    <input type="radio" name="date" value="3개월" id="three">
+                    <label for="three">3개월</label>
+                    <input type="radio" name="date" value="6개월" id="six">
+                    <label for="six">6개월</label>
+                    <input type="radio" name="date" value="1년" id="year">
+                    <label for="year">1년</label>
+                    <input type="radio" name="date" value="직접입력" id="self">
+                    <label for="self">직접입력</label>
                     <select>
                         <option value="2018">2018</option>
                     </select>
