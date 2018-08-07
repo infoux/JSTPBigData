@@ -418,11 +418,90 @@ body {
     clip: auto;
 }
 
+#ui-datepicker-div {
+    .block;
+    background:@white;
+    .drop-shadow();
+    font-size:17px;
+    padding:20px;
+    border:1px solid #ccc;
+
+    div.ui-datepicker-header {
+        .relative;
+        .center;
+        margin:0 0 20px;
+
+        a.ui-datepicker-prev {
+            .absolute;
+            left:0;
+            top:10px;
+            font-size:14px;
+            .pointer;
+
+            &::before {
+                content:"< ";
+            }
+        }
+
+        a.ui-datepicker-next {
+            .absolute;
+            right:0;
+            font-size:14px;
+            .pointer;
+            top:10px;
+
+            &::after {
+                content:" >";
+            }
+        }
+
+        div.ui-datepicker-title {
+            font-size:22px;
+        }
+    }
+
+    table {
+        border-spacing:0;
+
+
+        th,
+        td {
+            width:40px;
+            height:40px;
+            .center;
+
+            a {
+                .block;
+                .top;
+                height:100%;
+                line-height:40px;
+                border-radius:50%;
+
+                &:hover {
+                    background:#eee;
+                }
+
+                &.ui-state-highlight {
+                    background:#5E7B00;
+                }
+            }
+
+            &.ui-datepicker-today {
+                a {
+                    background:#fd8a17;
+                    color:@white;
+                }
+            }
+        }
+    }
+}
+
+
 
 /* style */
 
 body {
-    min-width: 1200px; 
+    min-width: 1300px; 
     background: #eee;
 
     #header {
@@ -477,35 +556,75 @@ body {
                         .center;
 
                         a {
+                            .relative;
                             .block;
                             height: 60px;
-                            padding: 15px 0 0 0;
+                            padding: 15px 0 15px 0;
 
-                            img {
-                                width: 30px;
-                                .middle;
-                            }
-
-                            h2 {
+                            h2.title {
                                 .inline-block;
                                 font-size: 20px;
                                 margin: 0;
-                                .middle;
+                                padding: 0 0 0 45px;
+                                line-height: 30px;
                                 color: @white;
                                 .normal;
-                                padding-left: 10px;
+
+
+                                &::before {
+                                    content: "";
+                                    .inline-block;
+                                    width: 30px;
+                                    height: 30px;
+                                    .absolute;
+                                    left: 65px;
+                                    top: 12px;
+                                    background: url("../images/bicon.svg") no-repeat;
+                                }
+
+                                &.wifi {
+
+                                    &::before {
+                                        background: url("../images/wifi.svg") no-repeat;
+                                    }
+                                }
+
+                                &.card {
+
+                                    &::before {
+                                        background: url("../images/card.svg") no-repeat;
+                                    }
+                                }
+
+                                &.person {
+
+                                    &::before {
+                                        left: 50px;
+                                        background: url("../images/person.svg") no-repeat;
+                                    }
+                                }
+
+                                &.kakao {
+                                    padding: 0;
+                                    font-size: 21px;
+                                    
+                                    &::before {
+                                        background: none;
+                                    }
+                                }
+                                
                             }
 
                             &:hover,
                             &.on {
                                 background: #fd8a17;
                                  
-                                h2 {
+                                h2.title {
                                     
-                                    &::before {
+                                    &::after {
                                         content:"";
                                         .absolute;
-                                        z-index: 9999;
+                                        z-index: 99999;
                                         .block;
                                         left: 50%;
                                         margin-left: -5px;
@@ -599,10 +718,10 @@ body {
                 &::after {
                     content: "";
                     display: inline-block;
-                    width: 25px;
-                    height: 15px;
+                    width: 15px;
+                    height: 10px;
                     .middle;
-                    margin: 0 3px 2px 3px;
+                    margin: 0 0 2px 5px;
                     background: url("../images/arrow.svg") no-repeat center center;
                 }
             }
@@ -616,105 +735,81 @@ body {
             padding: 20px;
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
 
-            p {
-                margin: 0 20px;
-                .inline-block;
-                color: #fd8a17;
-                font-size: 16px;
-                .normal;
-            }
-
-            input[type="radio"] {
-                .inline-block;
-                .none;
-            }
-
-            input[type="radio"]:checked + label{
-                background: #fd8a17;
-                border: 1px solid #fd8a17;
-                color: @white;
-            }
-
-            label {
-                padding: 8px;
-                border: 1px solid #ddd;
-                line-height: 35px;
-                border-radius: 5px;
-                margin-right: 3px;
-                font-size: 14px;
-                .pointer;
-            }
-
-            a {
-                .inline-block;
-                width: 60px;
-                height: 35px;
-                line-height: 35px;
-                .center;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                font-size: 14px;
-                margin-right: 3px;
-
-                &:hover {
-                    background: #fd8a17;
-                    border: 1px solid #fd8a17;
-                    color: @white;
-                }
-
-                &.self {
-                    width: 75px;
-                }
-
-                &.active {
-                    background: #fd8a17;
-                    border: 1px solid #fd8a17;
-                    color: @white;
-                }
-            }
-
-            select {
-                border: 1px solid #ddd;
-                border-radius: 3px;
-                width: 60px;
-                height: 34px;
-                padding-left: 3px;
-                font-size: 14px;
-                .top;
-                margin-right: 3px;
-            }
-
-            
-
             dl {
-                margin: 0 0 0 15px;
-                font-size: 16px;
+                .inline-block;
+                .zero;
+                margin: 0;
+                width: 100%;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                
+                dt {
+                    color: #fd8a17;
+                    float: left;
+                    width: 140px;
+                    margin: 0;
+                    line-height: 47px;
+                    padding-right: 10px;
+                    font-size: 16px;
+                    .bottom;
+                }
 
                 dd {
-                    width: 430px;
-                    height: 35px;
-                    .inline-block;
-                    margin: 0 10px 15px 10px;
+                    float: left;
+                    padding: 0;
+                    margin: 5px 0;
+                    width: calc(~"50% - 140px");
 
-                    &.long {
-                        
-                        a {
-                            width: 130px;
+                    &.full {
+                        width: calc(~"100% - 140px");
+                    }
+
+
+                    input[type="radio"] {
+                        .inline-block;
+                        .none;
+                    }
+        
+                    input[type="radio"]:checked + label{
+                        background: #fd8a17;
+                        border: 1px solid #fd8a17;
+                        color: @white;
+                    }
+
+                    input[type="text"] {
+                        width: 150px;
+                        height: 35px;
+                        .top;
+                        border: 1px solid #ddd;
+                        padding-left: 5px;
+                        font-size: 14px;
+                        margin-left: 5px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        margin: 0 10px 0 15px;
+                    }
+        
+                    label {
+                        padding: 0 8px;
+                        border: 1px solid #ddd;
+                        line-height: 35px;
+                        border-radius: 5px;
+                        margin-right: 5px;
+                        font-size: 14px;
+                        .pointer;
+                        .inline-block;
+
+                        &.sr-only {
+                            
                         }
                     }
 
-                    &.period {
-                        width: 100%;
-                        margin: 0 0 0 10px;
-                    }
-
-                    p {
-                        .inline-block;
-                        color: #fd8a17;
-                        width: 70px;
-                        line-height: 35px;
-                        margin: 0;
-                    }
 
                     a {
                         .inline-block;
@@ -736,12 +831,12 @@ body {
                     }
 
                     select {
-                        border: 1px solid #ddd;
+                        
                         border-radius: 3px;
                         width: 60px;
-                        height: 35px;
-                        padding-left: 3px;
-                        font-size: 14px;
+                        height: 37px;
+                        
+                        
                         .top;
                         margin-right: 3px;
                     }
@@ -756,11 +851,11 @@ body {
                 padding: 7px 15px;
                 .pointer;
                 .absolute;
-                top: 24px;
+                top: 28px;
                 right: 20px;
 
                 &.sub_btn {
-                    top: 125px;
+                    top: 122px;
                 }
             }
         }
@@ -939,9 +1034,28 @@ body {
             }
         }
 
+        div.notice {
+            width: 100%;
+            height: 70px;
+            border-radius: 5px;
+            background: @white;
+            padding: 10px 10px 10px 20px;
+            margin-top: 20px;
+            line-height: 50px;
+            
+            p {
+                margin: 0;
+                font-size: 14px;
+
+                strong {
+                    color: #fd8a17;
+                }
+            }
+        }
+
         div.sub_graph {
             width: 100%;
-            height: 900px;
+            height: auto;
             line-height: 900px;
             background: @white;
             margin-top: 20px;

@@ -11,6 +11,7 @@
     <!-- javaScript  -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -26,8 +27,7 @@
                 <ul class="menu">
                     <li class="menu-title">
                         <a href="">
-                            <img src="images/bicon.svg" alt="비콘">
-                            <h2>비콘</h2>
+                            <h2 class="title bicon">비콘</h2>
                         </a>
 
                         <ul>
@@ -51,8 +51,7 @@
 
                     <li class="menu-title">
                         <a href="">
-                            <img src="images/wifi.svg" alt="wifi">
-                            <h2>WiFi</h2>
+                            <h2 class="title wifi">WiFi</h2>
                         </a>
 
                         <ul>
@@ -71,8 +70,7 @@
 
                     <li class="menu-title">
                         <a href="">
-                            <img src="images/card.svg" alt="카드">
-                            <h2>카드</h2>
+                            <h2 class="title card">카드</h2>
                         </a>
 
                         <ul>
@@ -86,8 +84,7 @@
 
                     <li class="menu-title">
                         <a href="">
-                            <img src="images/person.svg" alt="인구통계">
-                            <h2>인구통계</h2>
+                            <h2 class="title person">인구통계</h2>
                         </a>
 
                         <ul>
@@ -99,6 +96,30 @@
                             <li>
                                 <a href="">
                                     <span>제주 인구통계</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-title">
+                        <a href="">
+                            <h2 class="title kakao">kakao</h2>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>소메뉴</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>소메뉴</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>소메뉴</span>
                                 </a>
                             </li>
                         </ul>
@@ -120,117 +141,26 @@
         </h1>
 
         <div class="date-wrap">
-            <p>기간</p>
-            <input type="radio" name="date" value="1개월" id="one" class="active">
-            <label for="one">1개월</label>
-            <input type="radio" name="date" value="3개월" id="three">
-            <label for="three">3개월</label>
-            <input type="radio" name="date" value="6개월" id="six">
-            <label for="six">6개월</label>
-            <input type="radio" name="date" value="1년" id="year">
-            <label for="year">1년</label>
-            <input type="radio" name="date" value="직접입력" id="self">
-            <label for="self">직접입력</label>
-            <select>
-                    <option value="2018">2018</option>
-                </select>
-            <select>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                    <option>06</option>
-                    <option>07</option>
-                    <option>08</option>
-                    <option>09</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                </select>
-            <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                    <option>15</option>
-                    <option>16</option>
-                    <option>17</option>
-                    <option>18</option>
-                    <option>19</option>
-                    <option>20</option>
-                    <option>21</option>
-                    <option>22</option>
-                    <option>23</option>
-                    <option>24</option>
-                    <option>25</option>
-                    <option>26</option>
-                    <option>27</option>
-                    <option>28</option>
-                    <option>29</option>
-                    <option>30</option>
-                    <option>31</option>
-                </select> ~
-            <select>
-                    <option value="2018">2018</option>
-                </select>
-            <select>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                    <option>06</option>
-                    <option>07</option>
-                    <option>08</option>
-                    <option>09</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                </select>
-            <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                    <option>15</option>
-                    <option>16</option>
-                    <option>17</option>
-                    <option>18</option>
-                    <option>19</option>
-                    <option>20</option>
-                    <option>21</option>
-                    <option>22</option>
-                    <option>23</option>
-                    <option>24</option>
-                    <option>25</option>
-                    <option>26</option>
-                    <option>27</option>
-                    <option>28</option>
-                    <option>29</option>
-                    <option>30</option>
-                    <option>31</option>
-                </select>
+            <dl>
+                <dt>기간</dt>
+                <dd class="full">
+                    <input type="radio" name="date" value="1개월" id="one" class="active">
+                    <label for="one">1개월</label>
+                    <input type="radio" name="date" value="3개월" id="three">
+                    <label for="three">3개월</label>
+                    <input type="radio" name="date" value="6개월" id="six">
+                    <label for="six">6개월</label>
+                    <input type="radio" name="date" value="1년" id="year">
+                    <label for="year">1년</label>
+                    <input type="radio" name="date" value="직접입력" id="self">
+                    <label for="self">직접입력</label>
+                    <label for="day-start" class="sr-only">시작일</label>
+                    <input id="day-start" type="text" placeholder="시작일">
+                    <span>~</span>
+                    <label for="day-end" class="sr-only">종료일</label>
+                    <input id="day-end" type="text" placeholder="종료일">
+                </dd>
+            </dl>
 
 
             <button class="search">조회</button>
@@ -335,8 +265,13 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <div class="notice">
+            <p>입도객 데이터는 <strong>제주관광협회</strong>에서 제공하는 데이터입니다.</p>
+        </div>
+    </div>
+
 </body>
 
-</ht
+</html>
