@@ -604,12 +604,14 @@ body {
                                     }
                                 }
 
-                                &.kakao {
-                                    padding: 0;
-                                    font-size: 21px;
+                                &.datahub {
                                     
                                     &::before {
-                                        background: none;
+                                        width: 25px;
+                                        height: 25px;
+                                        left: 48px;
+                                        top: 14px;
+                                        background: url("../images/datahub.svg") no-repeat;
                                     }
                                 }
                                 
@@ -782,12 +784,12 @@ body {
 
                     input[type="text"] {
                         width: 150px;
-                        height: 35px;
+                        height: 37px;
                         .top;
                         border: 1px solid #ddd;
+                        border-radius: 5px;
                         padding-left: 5px;
                         font-size: 14px;
-                        margin-left: 5px;
                     }
 
                     span {
@@ -804,10 +806,6 @@ body {
                         font-size: 14px;
                         .pointer;
                         .inline-block;
-
-                        &.sr-only {
-                            
-                        }
                     }
 
 
@@ -835,7 +833,9 @@ body {
                         border-radius: 3px;
                         width: 60px;
                         height: 37px;
-                        
+                        border: 1px solid #ddd;
+                        font-size: 14px;
+                        padding-left: 3px; 
                         
                         .top;
                         margin-right: 3px;

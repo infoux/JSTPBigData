@@ -12,7 +12,6 @@
     <!-- javaScript  -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -144,67 +143,88 @@
 
         <div class="date-wrap">
             <dl>
-                <dt>주제</dt>
-                <dd>
-                    <input type="radio" name="subject" value="방문수(건)" id="visit">
-                    <label for="visit">방문수(건)</label>
-                    <input type="radio" name="subject" value="평균체류시간(분)" id="average">
-                    <label for="average">평균체류시간(분)</label>
-                </dd>
-
-                <dt>소주제</dt>
-                <dd>
-                    <input type="radio" name="s_subject" value="앱ID" id="app">
-                    <label for="app">앱 ID</label>
-                    <input type="radio" name="s_subject" value="플랫폼" id="flatform">
-                    <label for="flatform">플랫폼</label>
-                    <input type="radio" name="s_subject" value="성별" id="gender">
-                    <label for="gender">성별</label>
-                    <input type="radio" name="s_subject" value="연령별" id="age">
-                    <label for="age">연령별</label>
-                </dd>
-
-                <dt>지역선택</dt>
-                <dd>
-                    <input type="radio" name="area" value="선택없음" id="none">
-                    <label for="none">선택없음</label>
-                    <input type="radio" name="area" value="제주시" id="jeju">
-                    <label for="jeju">제주시</label>
-                    <input type="radio" name="area" value="서귀포시" id="seogwipo">
-                    <label for="seogwipo">서귀포</label>
-                </dd>
-
-                <dt>표출선택</dt>
-                <dd>
-                    <input type="radio" name="select" value="일자별" id="date_select">
-                    <label for="date_select">일자별</label>
-                    <input type="radio" name="select" value="지역별" id="area_select">
-                    <label for="area_select">지역별</label>
-                </dd>
-
-                <dt>기간</dt>
+                <dt>분석일자</dt>
                 <dd class="full">
-                    <input type="radio" name="date" value="1개월" id="one">
-                    <label for="one">1개월</label>
-                    <input type="radio" name="date" value="3개월" id="three">
-                    <label for="three">3개월</label>
-                    <input type="radio" name="date" value="6개월" id="six">
-                    <label for="six">6개월</label>
-                    <input type="radio" name="date" value="1년" id="year">
-                    <label for="year">1년</label>
-                    <input type="radio" name="date" value="직접입력" id="self">
-                    <label for="self">직접입력</label>
-                    <label for="day-start" class="sr-only">시작일</label>
-                    <input id="day-start" type="text" placeholder="시작일">
-                    <span>~</span>
-                    <label for="day-end" class="sr-only">종료일</label>
-                    <input id="day-end" type="text" placeholder="종료일">
+                    <select>
+                        <option value="">2018</option>
+                    </select>
+                    <select>
+                        <option value="">01</option>
+                        <option value="">02</option>
+                        <option value="">03</option>
+                        <option value="">04</option>
+                        <option value="">05</option>
+                        <option value="">06</option>
+                        <option value="">07</option>
+                        <option value="">08</option>
+                        <option value="">09</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                    <input type="radio" name="date" value="날짜" id="date01">
+                    <label for="date01">08.04</label>
+                    <input type="radio" name="date" value="날짜" id="date02">
+                    <label for="date02">08.11</label>
+                    <input type="radio" name="date" value="날짜" id="date03">
+                    <label for="date03">08.18</label>
+                    <input type="radio" name="date" value="날짜" id="date04">
+                    <label for="date04">08.25</label>
+                    <input type="radio" name="date" value="날짜" id="date05">
+                    <label for="date05">08.30</label>
                 </dd>
             </dl>
-            <button class="search sub_btn">조회</button>
         </div>
 
-        <div class="sub_graph">그래프영역</div>
+        <div class="dashboard">
+            <div class="graph-wrap">
+                <div class="graph">
+                    <div class="graph-title">
+                        <h5>해수욕장 인기순위(대중교통)</h5>
+                        <img src="images/graph_05.jpg" alt="이용자 구분 비콘 방문패턴">
+                    </div>
+                    <div class="rank">
+                        <img src="images/title_01.png" alt="비콘 방문">
+                        <h5>비콘방문 <i>TOP 10</i></h5>
+                        <dl class="rank-list rank01">
+                            <dd><strong>1</strong>동문재래시장</dd>
+                            <dd><strong>2</strong>카멜리아힐</dd>
+                            <dd><strong>3</strong>오셜록티뮤지엄</dd>
+                            <dd><strong>4</strong>함덕해수욕장</dd>
+                            <dd><strong>5</strong>제주국제공항</dd>
+                            <dd><strong>6</strong>성산일출봉</dd>
+                            <dd><strong>7</strong>제주김만복본점</dd>
+                            <dd><strong>8</strong>에코랜드테마파크</dd>
+                            <dd><strong>9</strong>월정리해수욕장</dd>
+                            <dd><strong class="last">10</strong>이호테우해수욕장</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="graph">
+                    <div class="graph-title">
+                        <h5>해수욕장 인기순위(자동차)</h5>
+                        <img src="images/graph_06.jpg" alt="이용자 구분 연령별 카드 소비패턴">
+                    </div>
+                    <div class="rank">
+                        <img src="images/title_02.png" alt="연령별 카드 소비">
+                        <h5>연령별 카드 소비 <i>TOP 10</i></h5>
+                        <dl class="rank-list rank02">
+                            <dd><strong>1</strong>동문재래시장</dd>
+                            <dd><strong>2</strong>카멜리아힐</dd>
+                            <dd><strong>3</strong>오셜록티뮤지엄</dd>
+                            <dd><strong>4</strong>함덕해수욕장</dd>
+                            <dd><strong>5</strong>제주국제공항</dd>
+                            <dd><strong>6</strong>성산일출봉</dd>
+                            <dd><strong>7</strong>제주김만복본점</dd>
+                            <dd><strong>8</strong>에코랜드테마파크</dd>
+                            <dd><strong>9</strong>월정리해수욕장</dd>
+                            <dd><strong class="last">10</strong>이호테우해수욕장</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="notice">
             <p>입도객 데이터는 <strong>제주관광협회</strong>에서 제공하는 데이터입니다.</p>
