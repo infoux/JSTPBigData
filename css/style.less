@@ -729,6 +729,38 @@ body {
             }
         }
 
+        ul.tabs {
+            .block;
+            padding: 0;
+            .no-list;
+            .zero;
+            background: #eee;
+            width: 100%;
+
+            li {
+                .inline-block;
+                .top;
+                width: calc(15% / 2);
+
+                a {
+                    .block;
+                    .center;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 5px 5px 0 0;
+                    font-size: 14px;
+                    .pointer;
+                    .ellipse;
+
+                    &.active {
+                        background: #fd8a17;
+                        color:  @white;
+                    }
+                }
+            }
+            
+        }
+
         div.date-wrap {
             .relative;
             width: 100%;
@@ -736,6 +768,26 @@ body {
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+
+            div.tab-data {
+                .none;
+                width: 100%;
+
+                @media all and (min-width: 1200px) {
+                    background: @white;
+                    width: 1200px;
+                }
+
+                div.sub-graph {
+                    margin-top: 20px;
+                    width: 100%;
+                }
+
+                &.active {
+                    .inline-block;
+                }
+
+            }
 
             dl {
                 .inline-block;
@@ -839,6 +891,10 @@ body {
                         
                         .top;
                         margin-right: 3px;
+
+                        &.long {
+                            width: 200px;
+                        }
                     }
                 }
             }
@@ -851,12 +907,8 @@ body {
                 padding: 7px 15px;
                 .pointer;
                 .absolute;
-                top: 28px;
+                bottom: 30px;
                 right: 20px;
-
-                &.sub_btn {
-                    top: 122px;
-                }
             }
         }
 
@@ -1053,10 +1105,10 @@ body {
             }
         }
 
-        div.sub_graph {
+        &>div.sub_graph {
             width: 100%;
             height: auto;
-            line-height: 900px;
+            min-height: 900px;
             background: @white;
             margin-top: 20px;
             .center;

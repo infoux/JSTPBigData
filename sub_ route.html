@@ -136,80 +136,100 @@
     <!-- E:header -->
     <!-- S:mainContent -->
     <div id="content">
-        <h1>방문패턴
+        <h1>이동경로
             <small>Home</small>
-            <small>비콘</small>
-            <small>방문패턴</small>
+            <small>대시보드</small>
+            <small>이동경로</small>
         </h1>
 
+        <ul class="tabs">
+            <li>
+                <a class="active" data="tab01">전체이동경로</a>
+            </li>
+            <li>
+                <a data="tab02">지역별이동경로</a>
+            </li>
+        </ul>
+
         <div class="date-wrap">
-            <dl>
-                <dt>주제</dt>
-                <dd>
-                    <input type="radio" name="subject" value="방문수(건)" id="visit">
-                    <label for="visit">방문수(건)</label>
-                    <input type="radio" name="subject" value="평균체류시간(분)" id="average">
-                    <label for="average">평균체류시간(분)</label>
-                </dd>
+            <div id="tab01" class="tab-data active">
+                <dl>
+                    <dt>대상</dt>
+                    <dd class="full">
+                        <input type="radio" name="object" value="비콘" id="bicon">
+                        <label for="bicon">비콘</label>
+                        <input type="radio" name="object" value="wifi" id="wifi">
+                        <label for="wifi">Wi-Fi</label>
+                    </dd>
 
-                <dt>소주제</dt>
-                <dd>
-                    <input type="radio" name="s_subject" value="앱ID" id="app">
-                    <label for="app">앱 ID</label>
-                    <input type="radio" name="s_subject" value="플랫폼" id="flatform">
-                    <label for="flatform">플랫폼</label>
-                    <input type="radio" name="s_subject" value="성별" id="gender">
-                    <label for="gender">성별</label>
-                    <input type="radio" name="s_subject" value="연령별" id="age">
-                    <label for="age">연령별</label>
-                </dd>
+                    <dt>기간</dt>
+                    <dd class="full">
+                        <input type="radio" name="date" value="1개월" id="one">
+                        <label for="one">1개월</label>
+                        <input type="radio" name="date" value="3개월" id="three">
+                        <label for="three">3개월</label>
+                        <input type="radio" name="date" value="6개월" id="six">
+                        <label for="six">6개월</label>
+                        <input type="radio" name="date" value="1년" id="year">
+                        <label for="year">1년</label>
+                        <input type="radio" name="date" value="직접입력" id="self">
+                        <label for="self">직접입력</label>
+                        <label for="day-start" class="sr-only">시작일</label>
+                        <input id="day-start" type="text" placeholder="시작일">
+                        <span>~</span>
+                        <label for="day-end" class="sr-only">종료일</label>
+                        <input id="day-end" type="text" placeholder="종료일">
+                    </dd>
+                </dl>
+                <button class="search">조회</button>
+            </div>
 
-                <dt>지역선택</dt>
-                <dd>
-                    <input type="radio" name="area" value="선택없음" id="none">
-                    <label for="none">선택없음</label>
-                    <input type="radio" name="area" value="제주시" id="jeju">
-                    <label for="jeju">제주시</label>
-                    <input type="radio" name="area" value="서귀포시" id="seogwipo">
-                    <label for="seogwipo">서귀포</label>
-                </dd>
+            <div id="tab02" class="tab-data">
+                <dl>
+                    <dt>대상</dt>
+                    <dd class="full">
+                        <input type="radio" name="object" value="비콘" id="bicon">
+                        <label for="bicon">비콘</label>
+                        <input type="radio" name="object" value="wifi" id="wifi">
+                        <label for="wifi">Wi-Fi</label>
+                    </dd>
 
-                <dt>표출선택</dt>
-                <dd>
-                    <input type="radio" name="select" value="일자별" id="date_select">
-                    <label for="date_select">일자별</label>
-                    <input type="radio" name="select" value="지역별" id="area_select">
-                    <label for="area_select">지역별</label>
-                </dd>
+                    <dt>비콘 출발지</dt>
+                    <dd class="full">
+                        <select class="long">
+                            <option>출발지를 선택해주세요.</option>
+                        </select>
+                    </dd>
 
-                <dt>표출선택</dt>
-                <dd class="full">
-                    <input type="radio" name="select" value="일자별" id="date_select">
-                    <label for="date_select">일자별</label>
-                    <input type="radio" name="select" value="지역별" id="area_select">
-                    <label for="area_select">지역별</label>
-                </dd>
+                    <dt>비콘 도착지</dt>
+                    <dd class="full">
+                        <select class="long">
+                            <option>도착지를 선택해주세요.</option>
+                        </select>
+                    </dd>
 
-                <dt>기간</dt>
-                <dd class="full">
-                    <input type="radio" name="date" value="1개월" id="one">
-                    <label for="one">1개월</label>
-                    <input type="radio" name="date" value="3개월" id="three">
-                    <label for="three">3개월</label>
-                    <input type="radio" name="date" value="6개월" id="six">
-                    <label for="six">6개월</label>
-                    <input type="radio" name="date" value="1년" id="year">
-                    <label for="year">1년</label>
-                    <input type="radio" name="date" value="직접입력" id="self">
-                    <label for="self">직접입력</label>
-                    <label for="day-start" class="sr-only">시작일</label>
-                    <input id="day-start" type="text" placeholder="시작일">
-                    <span>~</span>
-                    <label for="day-end" class="sr-only">종료일</label>
-                    <input id="day-end" type="text" placeholder="종료일">
-                </dd>
-            </dl>
-            <button class="search">조회</button>
+                    <dt>기간</dt>
+                    <dd class="full">
+                        <input type="radio" name="date" value="1개월" id="one">
+                        <label for="one">1개월</label>
+                        <input type="radio" name="date" value="3개월" id="three">
+                        <label for="three">3개월</label>
+                        <input type="radio" name="date" value="6개월" id="six">
+                        <label for="six">6개월</label>
+                        <input type="radio" name="date" value="1년" id="year">
+                        <label for="year">1년</label>
+                        <input type="radio" name="date" value="직접입력" id="self">
+                        <label for="self">직접입력</label>
+                        <label for="day-start" class="sr-only">시작일</label>
+                        <input id="day-start" type="text" placeholder="시작일">
+                        <span>~</span>
+                        <label for="day-end" class="sr-only">종료일</label>
+                        <input id="day-end" type="text" placeholder="종료일">
+                    </dd>
+
+                </dl>
+                <button class="search">조회</button>
+            </div>
         </div>
 
         <div class="sub_graph">그래프영역</div>

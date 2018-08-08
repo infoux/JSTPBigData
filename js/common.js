@@ -83,4 +83,13 @@ $(document).ready(function() {
         $("#date").datepicker();
 
     } catch (e) {};
+
+    $("div#content .tabs a").click(function() {
+        var tabs = $(this).attr("data");
+        $("div#content .tabs a").removeClass("active");
+        $(this).addClass("active");
+        $("div#content div.tab-data").removeClass("active");
+        $("div#content div #" + tabs).addClass("active");
+
+    });
 });
