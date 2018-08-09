@@ -942,7 +942,7 @@ body {
                     }
 
                     div.graph-title {
-                        width: calc(~"100% - 250px");
+                        width: calc(~"100% - 210px");
                         height: 100%;
                         border-radius: 5px;
                         float: left;
@@ -953,7 +953,7 @@ body {
                             padding: 20px;
                             border-bottom:  1px solid #eee;
                             .left;
-                            font-size: 14px;
+                            font-size: 16px;
                             .normal;
 
                             i {
@@ -978,9 +978,9 @@ body {
                         .relative;
                         float: right;
                         .inline-block;
-                        width: 250px;
+                        width: 210px;
                         height: 100%;
-                        background: #595959;
+                        background: #444;
 
                         img {
                             .absolute;
@@ -1006,7 +1006,68 @@ body {
                                 color: @white;
                                 font-size: 16px;
                                 margin-top: 10px;
+                                margin-left: 4px;
                                 .pointer;
+
+                                &:nth-child(1) {
+                                    strong {
+                                        background: #1f4075;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    strong {
+                                        background: #1754a5;
+                                    }
+                                }
+
+                                &:nth-child(3) {
+                                    strong {
+                                        background: #007598;
+                                    }
+                                }
+
+                                &:nth-child(4) {
+                                    strong {
+                                        background: #1b6767;
+                                    }
+                                }
+
+                                &:nth-child(5) {
+                                    strong {
+                                        background: #018646;
+                                    }
+                                }
+
+                                &:nth-child(6) {
+                                    strong {
+                                        background: #70ad47;
+                                    }
+                                }
+
+                                &:nth-child(7) {
+                                    strong {
+                                        background: #c6de32;
+                                    }
+                                }
+
+                                &:nth-child(8) {
+                                    strong {
+                                        background: #ebe46f;
+                                    }
+                                }
+
+                                &:nth-child(9) {
+                                    strong {
+                                        background: #dbdbdb;
+                                    }
+                                }
+
+                                &:nth-child(10) {
+                                    strong {
+                                        background: #6d819c;
+                                    }
+                                }
                                 
                                 strong {
                                     content: "";
@@ -1018,6 +1079,7 @@ body {
                                         padding: 5px 0 5px 0;
                                         .center;
                                         margin: 0 14px 0 10px;
+                                        text-shadow: #222 1px 1px 1px;
 
                                     &.last {
                                         margin: 0 15px 0 8px;
@@ -1028,7 +1090,8 @@ body {
                             &.rank01 {
 
                                 dd {
-                                    &:hover {
+                                    &:hover,
+                                    &.on {
                                         color: #8fbe00;
 
                                         strong {
@@ -1046,7 +1109,8 @@ body {
                             &.rank02 {
 
                                 dd {
-                                    &:hover {
+                                    &:hover,
+                                    &.on {
                                         color: #51ba96;
 
                                         strong {
@@ -1064,7 +1128,8 @@ body {
                             &.rank03 {
 
                                 dd {
-                                    &:hover {
+                                    &:hover,
+                                    &.on {
                                         color: #21caee;
 
                                         strong {
@@ -1082,7 +1147,8 @@ body {
                             &.rank04 {
 
                                 dd {
-                                    &:hover {
+                                    &:hover,
+                                    &.on {
                                         color: #ff8a22;
 
                                         strong {
