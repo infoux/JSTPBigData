@@ -2,7 +2,7 @@
 @import "normalize.css";
 @import "rem.less";
 @import "fontello.css";
-
+@import "animation.css";
 
 /* fonts */
 /* nanum barun gothic - regular */
@@ -757,12 +757,40 @@ body {
         width: 100%;
         padding: 20px 200px;
         margin: 0 auto;
+
+        div.loading {
+            position: fixed;
+            // display: none;
+            z-index: 9999;
+            .full-position;
+            color: #333;
+            text-align: center;
+            padding-top: 50vh;
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.9);
+
+            p {
+                margin: -85px 0 0 0;
+                display: block;
+                height: 170px;
+
+                i {
+                    font-size: 120px;
+                    margin-bottom: 20px;
+                    color: #999;
+                }
+
+                h2 {
+                    margin: 0;
+                }
+            }            
+        }
         
         h1 {
             color: #fd8a17;
             font-size: 22px;
             margin: 8px 0 5px 0;
-            
+
             small {
                 color: #222;
                 font-size: 16px;
