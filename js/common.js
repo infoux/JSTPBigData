@@ -82,8 +82,10 @@ $(document).ready(function() {
         $("#day-end").datepicker();
         $("#date").datepicker();
 
+
     } catch (e) {};
 
+    $("#day-month").monthpicker();
     $("div#content .tabs a").click(function() {
         var tabs = $(this).attr("data");
         $("div#content .tabs a").removeClass("active");

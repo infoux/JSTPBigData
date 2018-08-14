@@ -1,4 +1,4 @@
-// out: ./style.css, compress: true, sourceMap: false
+// out: ./style_iframe.css, compress: true, sourceMap: false
 @import "normalize.css";
 @import "rem.less";
 @import "fontello.css";
@@ -481,7 +481,7 @@ body {
                     background:#eee;
                 }
 
-                &.mtz-monthpicker-month {
+                &.ui-state-highlight {
                     background:#5E7B00;
                 }
             }
@@ -496,266 +496,14 @@ body {
     }
 }
 
-
-div[id^=monthpicker_] {
-    .block;
-    background:@white;
-    .drop-shadow();
-    font-size:17px;
-    padding:20px;
-    border:1px solid #ccc;
-
-    div.ui-datepicker-header {
-        .relative;
-        .center;
-        margin:0 0 20px;
-    }
-
-    select {
-        width: 100%;
-        height: 40px;
-        border-radius: 5px;
-        .pointer;
-    }
-
-    table.mtz-monthpicker {
-        border-spacing:0;
-        margin: 0 auto;
-
-        td {
-            width: 50px;
-            height: 40px;
-            .center;
-            .top;            
-            line-height: 40px;
-            border-radius: 50%;
-            margin: 0 20px;
-
-            &:hover {
-                background:#eee;
-            }
-        }
-
-    }
-}
-
-
 /* style */
 
 body {
-    min-width: 1300px; 
-    background: #eee;
-
-    #header {
-        .relative;
-        width: 100%;
-        background: #595959;
-        height: 60px;
-
-        nav.menu-list {
-            width: 100%;
-
-            div.container {
-                .relative;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    clear: both;
-                }
-
-                h1 {
-                    .zero;
-                    background: url("../images/logo_2.png") no-repeat center / 100% 100%;
-                    width: 185px;
-                    height: 48px;
-                    float: left;
-                    margin: 5px 40px 5px 20px;
-
-                    a {
-                        .block;
-                        width: 100%;
-                        height: 100%;
-                        .zero;
-                    }
-                }
-
-                ul.menu {
-                    .mapazero;
-                    .no-list;
-                    width: 100%;    
-                    
-                    &::after {
-                        content: "";
-                        display: block;
-                        clear: both;
-                    }
-
-                    li.menu-title {
-                        .relative;
-                        float: left;
-                        width: 200px;
-                        height: 60px;
-                        .center;
-
-                        a {
-                            .relative;
-                            .block;
-                            height: 60px;
-                            padding: 15px 0 15px 0;
-
-                            h2.title {
-                                .inline-block;
-                                font-size: 20px;
-                                margin: 0;
-                                padding: 0 0 0 45px;
-                                line-height: 30px;
-                                color: @white;
-                                .normal;
-
-
-                                &::before {
-                                    content: "";
-                                    .inline-block;
-                                    width: 30px;
-                                    height: 30px;
-                                    .absolute;
-                                    left: 65px;
-                                    top: 12px;
-                                    background: url("../images/bicon.svg") no-repeat;
-                                }
-
-                                &.wifi {
-
-                                    &::before {
-                                        background: url("../images/wifi.svg") no-repeat;
-                                    }
-                                }
-
-                                &.card {
-
-                                    &::before {
-                                        background: url("../images/card.svg") no-repeat;
-                                    }
-                                }
-
-                                &.person {
-
-                                    &::before {
-                                        left: 50px;
-                                        background: url("../images/person.svg") no-repeat;
-                                    }
-                                }
-
-                                &.datahub {
-                                    
-                                    &::before {
-                                        width: 25px;
-                                        height: 25px;
-                                        left: 48px;
-                                        top: 14px;
-                                        background: url("../images/datahub.svg") no-repeat;
-                                    }
-                                }
-                                
-                            }
-
-                            &:hover,
-                            &.on {
-                                background: #fd8a17;
-                                 
-                                h2.title {
-                                    
-                                    &::after {
-                                        content:"";
-                                        .absolute;
-                                        z-index: 99999;
-                                        .block;
-                                        left: 50%;
-                                        margin-left: -5px;
-                                        top: 60px;
-                                        border: 7px solid transparent;
-                                        border-top-color: #fd8a17;
-                                    }
-                                }
-                            }
-
-                        }
-
-                        ul {
-                            .mapazero;
-                            .no-list;
-                            width: 200px;
-                            height: 159px;
-                            background: #fafafa;
-                            font-size: 20px;
-                            z-index: 999;
-                            .absolute;
-                            .none;
-                            
-                            &.active {
-                                display: block;
-                            }
-                  
-                            
-                            li {
-
-                                a {
-                                    .block;
-                                    width: 100%;
-                                    height: 100%;
-                                    padding: 15px;
-
-                                    &:hover {
-                                        background: #595959;
-                                        color: @white;
-                                    }
-
-                                }
-                            }
-                        }
-                    }
-                }
-
-                a.home {
-                    .inline-block;
-                    width: 49px;
-                    height: 41px;
-                    .absolute;
-                    top: 10px;
-                    right: 125px;
-
-                    i {
-                        font-size: 35px;
-
-                        &::before {
-                            color: #222;
-                            .middle;
-                        }
-                    }
-                }
-
-                button.login {
-                    width: 85px;
-                    height: 36px;
-                    border: none;
-                    border-radius: 5px;
-                    background: #fd8a17;
-                    color: @white;
-                    font-size: 16px;
-                    .pointer;
-                    .absolute;
-                    right: 20px;
-                    top: 12px;
-                }
-            }
-
-        }
-    }
+    width: 100%;
 
     div#content {
         width: 100%;
-        padding: 20px 200px;
+        padding: 0 20px 0 0;
         margin: 0 auto;
         
         h1 {
@@ -961,7 +709,6 @@ body {
 
                     div.day {
                         .inline-block;
-                        padding-left: 20px;
                     }
                 }
             }
@@ -1005,7 +752,7 @@ body {
                     }
 
                     div.graph-title {
-                        width: calc(~"100% - 240px");
+                        width: calc(~"100% - 210px");
                         height: 100%;
                         border-radius: 5px;
                         float: left;
@@ -1041,7 +788,7 @@ body {
                         .relative;
                         float: right;
                         .inline-block;
-                        width: 240px;
+                        width: 210px;
                         height: 100%;
                         background: #444;
 
@@ -1514,7 +1261,7 @@ body {
         &>div.sub_graph {
             width: 100%;
             height: auto;
-            min-height: 660px;
+            min-height: 80px;
             background: @white;
             margin-top: 20px;
             .center;

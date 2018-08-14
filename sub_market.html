@@ -12,6 +12,10 @@
     <!-- javaScript  -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script src="http://220.124.222.184/dashboard/JSTPBigData/js/jquery.mtz.monthpicker.js"></script>
+
 </head>
 
 <body>
@@ -126,7 +130,7 @@
                     </li>
 
                 </ul>
-
+                <a class="home" href="#"><i class="icon-home"></i></a>
                 <button class="login">로그인</button>
             </div>
         </nav>
@@ -141,39 +145,19 @@
             <small>소메뉴</small>
         </h1>
 
+        <div class="loadingPop">
+            <p>
+                <i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+                <h2>데이터를 불러오는 중 입니다.</h2>
+            </p>
+        </div>
+
         <div class="date-wrap">
             <dl>
-                <dt>분석일자</dt>
+                <dt>분석월</dt>
                 <dd class="full">
-                    <select>
-                        <option value="">2018</option>
-                    </select>
-                    <select>
-                        <option value="">01</option>
-                        <option value="">02</option>
-                        <option value="">03</option>
-                        <option value="">04</option>
-                        <option value="">05</option>
-                        <option value="">06</option>
-                        <option value="">07</option>
-                        <option value="">08</option>
-                        <option value="">09</option>
-                        <option value="">10</option>
-                        <option value="">11</option>
-                        <option value="">12</option>
-                    </select>
-                    <div class="day">
-                        <input type="radio" name="date" value="날짜" id="date01">
-                        <label for="date01">08.04</label>
-                        <input type="radio" name="date" value="날짜" id="date02">
-                        <label for="date02">08.11</label>
-                        <input type="radio" name="date" value="날짜" id="date03">
-                        <label for="date03">08.18</label>
-                        <input type="radio" name="date" value="날짜" id="date04">
-                        <label for="date04">08.25</label>
-                        <input type="radio" name="date" value="날짜" id="date05">
-                        <label for="date05">08.30</label>
-                    </div>
+                    <label for="day-month" class="sr-only month">분석월</label>
+                    <input id="day-month" type="text" placeholder="분석월">
                 </dd>
             </dl>
         </div>
@@ -257,6 +241,52 @@
                         <div class="rank">
                             <h5>범례</h5>
                             <dl class="rank-list color04">
+                                <dd><strong>1</strong>동문재래시장</dd>
+                                <dd><strong>2</strong>카멜리아힐</dd>
+                                <dd><strong>3</strong>오셜록티뮤지엄</dd>
+                                <dd><strong>4</strong>함덕해수욕장</dd>
+                                <dd><strong>5</strong>제주국제공항</dd>
+                                <dd><strong>6</strong>성산일출봉</dd>
+                                <dd><strong>7</strong>제주김만복본점</dd>
+                                <dd><strong>8</strong>에코랜드테마파크</dd>
+                                <dd><strong>9</strong>월정리해수욕장</dd>
+                                <dd><strong class="last">10</strong>이호테우해수욕장</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="graph">
+                        <div class="graph-title">
+                            <h5>전통시장 인기순위(자동차)<i class="icon-menu"></i></h5>
+                            <div>차트영역</div>
+                        </div>
+                        <div class="rank">
+                            <h5>범례</h5>
+                            <dl class="rank-list color05">
+                                <dd><strong>1</strong>동문재래시장</dd>
+                                <dd><strong>2</strong>카멜리아힐</dd>
+                                <dd><strong>3</strong>오셜록티뮤지엄</dd>
+                                <dd><strong>4</strong>함덕해수욕장</dd>
+                                <dd><strong>5</strong>제주국제공항</dd>
+                                <dd><strong>6</strong>성산일출봉</dd>
+                                <dd><strong>7</strong>제주김만복본점</dd>
+                                <dd><strong>8</strong>에코랜드테마파크</dd>
+                                <dd><strong>9</strong>월정리해수욕장</dd>
+                                <dd><strong class="last">10</strong>이호테우해수욕장</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="graph">
+                        <div class="graph-title">
+                            <h5>전통시장 인기순위(자동차)<i class="icon-menu"></i></h5>
+                            <div>차트영역</div>
+                        </div>
+                        <div class="rank">
+                            <h5>범례</h5>
+                            <dl class="rank-list color06">
                                 <dd><strong>1</strong>동문재래시장</dd>
                                 <dd><strong>2</strong>카멜리아힐</dd>
                                 <dd><strong>3</strong>오셜록티뮤지엄</dd>
