@@ -1574,6 +1574,28 @@ body {
 
                 &.surround-info {
                     left: -198px;
+                    width: 340px;
+                    background: #ccc;
+
+                    &::after {
+                        content:"";
+                        .absolute;
+                        z-index: 99999;
+                        .block;
+                        left: 50%;
+                        margin-left: -15px;
+                        bottom: -30px;
+                        border: 15px solid transparent;
+                        border-top-color: #ccc;
+                    }
+
+                    button.detail {
+                        border: 1px solid #999;
+                    }
+
+                    h3 {
+                        font-size: 14px;
+                    }
                 }
 
                 &::before {
