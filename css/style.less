@@ -1562,8 +1562,10 @@ body {
 
             div.info {
                 .absolute;
-                width: 350px;
+                width: 400px;
+                min-height: 145px;
                 border: 1px solid #ccc;
+                background: #fff;
                 border-radius: 5px;
                 padding: 20px;
                 z-index: 1200;
@@ -1575,7 +1577,7 @@ body {
                     .block;
                     left: 50%;
                     margin-left: -16px;
-                    top: 186px;
+                    bottom: -33px;
                     border: 16px solid transparent;
                     border-top-color: #ccc;
                 }
@@ -1587,7 +1589,7 @@ body {
                     .block;
                     left: 50%;
                     margin-left: -15px;
-                    top: 185px;
+                    bottom: -30px;
                     border: 15px solid transparent;
                     border-top-color: #fff;
                 }
@@ -1595,8 +1597,8 @@ body {
                 a {
                     .inline-block;
                     .absolute;
-                    top: -10px;
-                    right: -10px;
+                    top: 3px;
+                    right: 0;
 
                     i::before {
                         font-size: 20px;
@@ -1607,7 +1609,7 @@ body {
                     font-size: 18px;
                     .normal;
                     .left;
-                    margin: 15px 0 0 0;
+                    margin: 0;
 
                     small {
                         .block;
@@ -1623,6 +1625,7 @@ body {
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
+                    margin: 10px 0;
                 }
 
                 button.detail {
@@ -1631,11 +1634,11 @@ body {
                     border: 1px solid #CCC;
                     border-radius: 5px;
                     color: #222;
-                    padding: 7px;
+                    padding: 5px 7px;
                     .pointer;
                     .absolute;
-                    right: 12px;
-                    top: 25px;
+                    right: 40px;
+                    top: 15px;
                 }
 
                 button.search_btn {
@@ -1645,8 +1648,9 @@ body {
                     border-radius: 5px;
                     color: #fff;
                     padding: 7px;
-                    margin: 0 1px;
+                    margin: 15px 1px 0 1px;
                     .pointer;
+                    .left;
 
                     &.lodge {
                         background: #2788b5;
@@ -1679,16 +1683,16 @@ body {
 
     #footer {
         width: 100%;
-        height: 80px;
-        line-height: 60px;
+        min-height: 120px;
         background: #595959;
         padding: 10px;
         margin-top: 20px;   
 
         p {
+            font-size: 13px;
             color: #fff;
             .center;
-            margin: 0;
+            margin: 17px 0;
         }
     }
 }
